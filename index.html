@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier AI Transformation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f5f5f5;
+    }
+    h1 {
+      color: #1a1a2e;
+    }
+    form {
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 16px;
+      font-weight: bold;
+      color: #333;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    a.apply-btn {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 12px 28px;
+      background: #1a1a2e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    a.apply-btn:hover {
+      background: #16213e;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 16px;
+      background: #e8f4fd;
+      border-radius: 4px;
+      font-size: 16px;
+      color: #1a1a2e;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Premier AI Transformation</h1>
+  <p>Complete the form below to see if you qualify for our AI transformation program.</p>
+
+  <form id="form">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="revenue">Annual Revenue (USD)</label>
+    <input type="number" id="revenue" name="revenue" min="0" required />
+
+    <label for="urgency">Urgency (1–10)</label>
+    <input type="number" id="urgency" name="urgency" min="1" max="10" required />
+
+    <label for="ai">AI Readiness (1–10)</label>
+    <input type="number" id="ai" name="ai" min="1" max="10" required />
+
+    <label for="budget">Budget (USD)</label>
+    <input type="number" id="budget" name="budget" min="0" required />
+
+    <label for="challenge">Describe Your Main Challenge</label>
+    <textarea id="challenge" name="challenge" rows="4" required></textarea>
+
+    <a href="#" class="apply-btn" id="apply-btn" role="button">Apply Now</a>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,3 +1,8 @@
+document.getElementById("apply-btn").addEventListener("click", function(e) {
+  e.preventDefault();
+  document.getElementById("form").requestSubmit();
+});
+
 document.getElementById("form").addEventListener("submit", async function(e) {
   e.preventDefault();
 
@@ -28,5 +33,7 @@ document.getElementById("form").addEventListener("submit", async function(e) {
     message = "You're on our waitlist.";
   }
 
-  document.getElementById("result").innerHTML = message;
+  const resultEl = document.getElementById("result");
+  resultEl.innerHTML = message;
+  resultEl.style.display = "block";
 });
