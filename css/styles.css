@@ -33,6 +33,12 @@ body {
   gap: 24px;
 }
 
+.navbar-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
 .hero {
   padding: 120px 20px 100px;
   text-align: center;
@@ -218,6 +224,12 @@ tbody tr:hover {
 .badge-gray {
   background: rgba(255,255,255,0.05);
   color: #9ca3af;
+}
+
+.error-msg {
+  color: #f87171;
+  text-align: center;
+  margin-top: 16px;
 }
 
 /* Footer */

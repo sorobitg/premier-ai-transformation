@@ -30,7 +30,7 @@ document.getElementById("form").addEventListener("submit", async function (e) {
     handleResult(result);
   } catch (err) {
     document.getElementById("result").innerHTML =
-      '<p style="color:#f87171;">Something went wrong. Please try again.</p>';
+      '<p class="error-msg">Something went wrong. Please try again.</p>';
     console.error("Submission error:", err);
   } finally {
     submitBtn.disabled = false;
