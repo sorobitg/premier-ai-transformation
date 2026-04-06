@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Dashboard – Premier AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">Premier AI</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="apply.html" class="btn">Apply Now</a>
+    </nav>
+  </nav>
+
+  <div class="dashboard-wrap">
+    <h1>Lead Dashboard</h1>
+
+    <div class="card" style="margin-bottom:32px;display:flex;gap:32px;flex-wrap:wrap;">
+      <div>
+        <p style="color:#9ca3af;margin:0 0 4px;">Total Leads</p>
+        <p id="stat-total" style="font-size:1.8rem;font-weight:700;margin:0;">—</p>
+      </div>
+      <div>
+        <p style="color:#9ca3af;margin:0 0 4px;">Strong Fits</p>
+        <p id="stat-hot" style="font-size:1.8rem;font-weight:700;margin:0;color:#34d399;">—</p>
+      </div>
+      <div>
+        <p style="color:#9ca3af;margin:0 0 4px;">Audit Candidates</p>
+        <p id="stat-warm" style="font-size:1.8rem;font-weight:700;margin:0;color:#fbbf24;">—</p>
+      </div>
+      <div>
+        <p style="color:#9ca3af;margin:0 0 4px;">Waitlist</p>
+        <p id="stat-cold" style="font-size:1.8rem;font-weight:700;margin:0;color:#9ca3af;">—</p>
+      </div>
+    </div>
+
+    <div class="card" style="overflow-x:auto;">
+      <table id="leadsTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Score</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="loading-msg" style="text-align:center;color:#9ca3af;padding:24px 0;">Loading leads…</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="footer-year"></span> Premier AI Transformation. All rights reserved.</p>
+  </footer>
+
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
