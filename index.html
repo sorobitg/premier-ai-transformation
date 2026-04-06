@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier AI Transformation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Premier <span>AI</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/apply.html">Apply</a></li>
+        <li><a href="pages/dashboard.html">Dashboard</a></li>
+      </ul>
+      <a href="pages/apply.html" class="btn btn--primary btn--sm">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <span class="hero__eyebrow">AI-Powered Business Transformation</span>
+      <h1 class="hero__title">
+        Turn AI Into Your<br /><span>Competitive Advantage</span>
+      </h1>
+      <p class="hero__subtitle">
+        We help established businesses identify, implement, and scale AI initiatives
+        that drive measurable revenue growth—fast.
+      </p>
+      <div class="hero__actions">
+        <a href="pages/apply.html" class="btn btn--primary btn--lg">Apply Now</a>
+        <a href="#how-it-works" class="btn btn--outline btn--lg">How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section class="features" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-header__title">Why Premier AI?</h2>
+        <p class="section-header__sub">A proven framework to accelerate your AI journey</p>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🔍</div>
+          <h3 class="feature-card__title">AI Readiness Audit</h3>
+          <p class="feature-card__body">
+            We assess your data infrastructure, team capabilities, and business goals
+            to uncover the highest-value AI opportunities.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🗺️</div>
+          <h3 class="feature-card__title">Custom Roadmap</h3>
+          <p class="feature-card__body">
+            You receive a prioritised 90-day implementation roadmap with clear
+            milestones, ROI projections, and quick wins.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🚀</div>
+          <h3 class="feature-card__title">Hands-On Execution</h3>
+          <p class="feature-card__body">
+            Our team works alongside yours to build and deploy AI solutions—no
+            vendor lock-in, no fluff, just results.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">📈</div>
+          <h3 class="feature-card__title">Ongoing Optimisation</h3>
+          <p class="feature-card__body">
+            We monitor performance, iterate on models, and ensure your AI stack keeps
+            delivering as your business evolves.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section style="padding: 5rem 0; text-align: center;">
+    <div class="container">
+      <div class="card" style="max-width:600px; margin:auto;">
+        <h2 style="font-size:1.75rem; font-weight:800; margin-bottom:.75rem;">
+          Ready to find out if you qualify?
+        </h2>
+        <p style="color:var(--color-muted); margin-bottom:1.5rem;">
+          Complete our 2-minute application and get an instant AI readiness score.
+        </p>
+        <a href="pages/apply.html" class="btn btn--primary btn--lg btn--block">
+          Start Your Application →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Premier AI Transformation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

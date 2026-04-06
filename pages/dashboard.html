@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard – Premier AI Transformation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Premier <span>AI</span></a>
+      <ul class="nav__links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      </ul>
+      <a href="apply.html" class="btn btn--primary btn--sm">New Application</a>
+    </div>
+  </nav>
+
+  <!-- ===== Page header ===== -->
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-header__title">Leads Dashboard</h1>
+      <p class="page-header__sub">All applications submitted via the intake form</p>
+    </div>
+  </div>
+
+  <!-- ===== Stats ===== -->
+  <div class="container">
+    <div class="dashboard-stats">
+      <div class="stat-card">
+        <div class="stat-card__value" id="stat-total">—</div>
+        <div class="stat-card__label">Total Leads</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="stat-fit" style="color:var(--color-success)">—</div>
+        <div class="stat-card__label">Strong Fit</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="stat-audit" style="color:var(--color-warning)">—</div>
+        <div class="stat-card__label">AI Audit</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="stat-wait" style="color:var(--color-muted)">—</div>
+        <div class="stat-card__label">Waitlist</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value" id="stat-avg-score">—</div>
+        <div class="stat-card__label">Avg. Score</div>
+      </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="dash-toolbar">
+      <input
+        type="search"
+        id="dash-search"
+        class="dash-toolbar__search"
+        placeholder="Search by name, email, company…"
+        aria-label="Search leads"
+      />
+      <button id="btn-clear" class="btn btn--outline btn--sm">Clear All Data</button>
+    </div>
+
+    <!-- Table -->
+    <div class="card">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Company</th>
+              <th>Score</th>
+              <th>Tier</th>
+              <th>Revenue</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="leads-tbody">
+            <tr>
+              <td colspan="7">
+                <div class="empty-state">
+                  <div class="empty-state__icon">📭</div>
+                  <div class="empty-state__title">No submissions yet</div>
+                  <p>Applications submitted via the intake form will appear here.</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Premier AI Transformation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/dashboard.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

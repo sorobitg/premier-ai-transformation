@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply – Premier AI Transformation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+
+  <!-- ===== Nav ===== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Premier <span>AI</span></a>
+      <ul class="nav__links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="apply.html" class="active">Apply</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <a href="apply.html" class="btn btn--primary btn--sm">Apply Now</a>
+    </div>
+  </nav>
+
+  <!-- ===== Page header ===== -->
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-header__title">AI Readiness Application</h1>
+      <p class="page-header__sub">
+        Tell us about your business. We'll calculate your AI readiness score instantly.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Content ===== -->
+  <div class="container">
+    <div class="intake-layout">
+
+      <!-- Form -->
+      <div>
+        <form
+          id="intake-form"
+          novalidate
+          data-script-url="YOUR_SCRIPT_URL"
+        >
+          <div class="card">
+            <h2 style="font-size:1.15rem; font-weight:700; margin-bottom:1.5rem;">
+              About You
+            </h2>
+
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" name="company" placeholder="Acme Inc." />
+            </div>
+          </div>
+
+          <div class="card mt-3">
+            <h2 style="font-size:1.15rem; font-weight:700; margin-bottom:1.5rem;">
+              Business Profile
+            </h2>
+
+            <div class="form-group">
+              <label for="revenue">Annual Revenue ($ millions)</label>
+              <div class="form-range-group">
+                <input
+                  type="range"
+                  id="revenue"
+                  name="revenue"
+                  min="0"
+                  max="100"
+                  value="5"
+                  step="1"
+                />
+                <span class="range-value" id="revenue-val">5</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="urgency">Urgency to adopt AI (1 = low, 10 = critical)</label>
+              <div class="form-range-group">
+                <input
+                  type="range"
+                  id="urgency"
+                  name="urgency"
+                  min="1"
+                  max="10"
+                  value="5"
+                  step="1"
+                />
+                <span class="range-value" id="urgency-val">5</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="ai">Current AI maturity (1 = none, 10 = advanced)</label>
+              <div class="form-range-group">
+                <input
+                  type="range"
+                  id="ai"
+                  name="ai"
+                  min="1"
+                  max="10"
+                  value="3"
+                  step="1"
+                />
+                <span class="range-value" id="ai-val">3</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">AI investment budget (1 = minimal, 10 = significant)</label>
+              <div class="form-range-group">
+                <input
+                  type="range"
+                  id="budget"
+                  name="budget"
+                  min="1"
+                  max="10"
+                  value="5"
+                  step="1"
+                />
+                <span class="range-value" id="budget-val">5</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="challenge">Biggest business challenge</label>
+              <textarea
+                id="challenge"
+                name="challenge"
+                placeholder="e.g. Scaling customer support without growing headcount…"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--block btn--lg mt-2">
+              Submit Application
+            </button>
+
+            <!-- Result box injected by intake.js -->
+            <div id="result-box"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="intake-sidebar">
+        <div class="card mb-4">
+          <h3 style="font-size:1rem; font-weight:700; margin-bottom:1.25rem;">What happens next?</h3>
+
+          <div class="intake-sidebar__item">
+            <span class="intake-sidebar__icon">⚡</span>
+            <div>
+              <div class="intake-sidebar__label">Instant Score</div>
+              <div class="intake-sidebar__desc">
+                Your AI readiness score is calculated the moment you submit.
+              </div>
+            </div>
+          </div>
+
+          <div class="intake-sidebar__item">
+            <span class="intake-sidebar__icon">📞</span>
+            <div>
+              <div class="intake-sidebar__label">Strategy Call</div>
+              <div class="intake-sidebar__desc">
+                Strong-fit applicants are invited to book a free 30-minute call.
+              </div>
+            </div>
+          </div>
+
+          <div class="intake-sidebar__item">
+            <span class="intake-sidebar__icon">🗺️</span>
+            <div>
+              <div class="intake-sidebar__label">Custom Roadmap</div>
+              <div class="intake-sidebar__desc">
+                We deliver a tailored AI roadmap within 5 business days.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p style="font-size:.85rem; color:var(--color-muted); text-align:center;">
+            🔒 Your information is kept strictly confidential and never sold to third parties.
+          </p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Premier AI Transformation. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/intake.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
