@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premier AI Transformation – Qualification Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #222;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 8px; }
+    p.subtitle { color: #555; margin-bottom: 24px; }
+    label { display: block; margin-top: 16px; font-weight: bold; }
+    select, textarea {
+      width: 100%;
+      margin-top: 6px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      box-sizing: border-box;
+    }
+    textarea { resize: vertical; min-height: 80px; }
+    button[type="submit"] {
+      margin-top: 24px;
+      padding: 10px 28px;
+      background: #0057b8;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover { background: #004499; }
+    #result {
+      margin-top: 28px;
+      padding: 16px;
+      border-radius: 6px;
+      background: #f0f6ff;
+      border: 1px solid #c0d8f8;
+    }
+    #result h3 { margin-top: 0; }
+    #result a {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 20px;
+      background: #0057b8;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    #result a:hover { background: #004499; }
+  </style>
+</head>
+<body>
+  <h1>AI Transformation Qualification</h1>
+  <p class="subtitle">Answer a few quick questions to see how we can help your business.</p>
+
+  <form id="form">
+    <label for="revenue">Annual Revenue Range</label>
+    <select id="revenue" name="revenue" required>
+      <option value="">— Select —</option>
+      <option value="1">Under $250k</option>
+      <option value="2">$250k – $1M</option>
+      <option value="3">$1M – $5M</option>
+      <option value="4">$5M+</option>
+    </select>
+
+    <label for="urgency">How urgent is your need to implement AI?</label>
+    <select id="urgency" name="urgency" required>
+      <option value="">— Select —</option>
+      <option value="1">Just exploring</option>
+      <option value="2">Within the next year</option>
+      <option value="3">Within 6 months</option>
+    </select>
+
+    <label for="ai">Current AI / tech readiness</label>
+    <select id="ai" name="ai" required>
+      <option value="">— Select —</option>
+      <option value="1">No digital tools in place</option>
+      <option value="2">Basic digital tools (CRM, spreadsheets)</option>
+      <option value="3">Advanced tools, some automation</option>
+    </select>
+
+    <label for="budget">Budget available for AI transformation</label>
+    <select id="budget" name="budget" required>
+      <option value="">— Select —</option>
+      <option value="1">Under $5k</option>
+      <option value="2">$5k – $15k</option>
+      <option value="3">$15k – $50k</option>
+      <option value="4">$50k+</option>
+    </select>
+
+    <label for="challenge">What is your biggest business challenge right now?</label>
+    <textarea id="challenge" name="challenge" placeholder="Describe your challenge…"></textarea>
+
+    <button type="submit">See My Results</button>
+  </form>
+
+  <div id="result" style="display:none;"></div>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let score = 0;
+
+      // Revenue (max 25)
+      const revenue = parseInt(document.getElementById("revenue").value) || 0;
+      score += revenue * 6;
+
+      // Urgency (max 20)
+      const urgency = parseInt(document.getElementById("urgency").value) || 0;
+      score += urgency * 7;
+
+      // AI Readiness (max 15)
+      const ai = parseInt(document.getElementById("ai").value) || 0;
+      score += ai * 5;
+
+      // Budget (max 30)
+      const budget = parseInt(document.getElementById("budget").value) || 0;
+      score += budget * 8;
+
+      // Challenge quality (manual signal)
+      const challenge = document.getElementById("challenge").value;
+      if (challenge.length > 50) score += 10;
+
+      // RESULT LOGIC
+      let resultText = "";
+
+      if (score >= 70) {
+        resultText = `
+          <h3>You're a strong fit</h3>
+          <p>Book your strategy call now.</p>
+          <a href="https://calendly.com/YOUR-LINK" target="_blank" rel="noopener noreferrer">Book Call</a>
+        `;
+      } else if (score >= 40) {
+        resultText = `
+          <h3>Good potential</h3>
+          <p>Start with an AI Audit.</p>
+          <a href="#">Request Audit</a>
+        `;
+      } else {
+        resultText = `
+          <h3>Not ready yet</h3>
+          <p>Join our waitlist and resources.</p>
+        `;
+      }
+
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = resultText;
+      resultDiv.style.display = "block";
+      resultDiv.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
