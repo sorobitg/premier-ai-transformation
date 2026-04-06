@@ -11,7 +11,7 @@ document.getElementById("form").addEventListener("submit", async function(e) {
     challenge: document.getElementById("challenge").value
   };
 
-  const response = await fetch("YOUR_SCRIPT_URL", {
+  const response = await fetch("https://script.google.com/macros/s/AKfycbygg_vEwhhtxyyp_Bq491Qo1UWIXoqmt-a_oRroCVizhzE6lcOjMQqLZ3e6XoQGXKUzMQ/exec", {
     method: "POST",
     body: JSON.stringify(data)
   });
