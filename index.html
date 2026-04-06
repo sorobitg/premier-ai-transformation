@@ -107,38 +107,47 @@
     document.getElementById("form").addEventListener("submit", function(e) {
       e.preventDefault();
 
+      const REVENUE_MULTIPLIER       = 6;
+      const URGENCY_MULTIPLIER       = 7;
+      const AI_MULTIPLIER            = 5;
+      const BUDGET_MULTIPLIER        = 8;
+      const MIN_CHALLENGE_LENGTH     = 50;
+      const CHALLENGE_BONUS_POINTS   = 10;
+      const STRONG_FIT_THRESHOLD     = 70;
+      const GOOD_POTENTIAL_THRESHOLD = 40;
+
       let score = 0;
 
       // Revenue (max 25)
       const revenue = parseInt(document.getElementById("revenue").value) || 0;
-      score += revenue * 6;
+      score += revenue * REVENUE_MULTIPLIER;
 
       // Urgency (max 20)
       const urgency = parseInt(document.getElementById("urgency").value) || 0;
-      score += urgency * 7;
+      score += urgency * URGENCY_MULTIPLIER;
 
       // AI Readiness (max 15)
       const ai = parseInt(document.getElementById("ai").value) || 0;
-      score += ai * 5;
+      score += ai * AI_MULTIPLIER;
 
       // Budget (max 30)
       const budget = parseInt(document.getElementById("budget").value) || 0;
-      score += budget * 8;
+      score += budget * BUDGET_MULTIPLIER;
 
       // Challenge quality (manual signal)
       const challenge = document.getElementById("challenge").value;
-      if (challenge.length > 50) score += 10;
+      if (challenge.length > MIN_CHALLENGE_LENGTH) score += CHALLENGE_BONUS_POINTS;
 
       // RESULT LOGIC
       let resultText = "";
 
-      if (score >= 70) {
+      if (score >= STRONG_FIT_THRESHOLD) {
         resultText = `
           <h3>You're a strong fit</h3>
           <p>Book your strategy call now.</p>
           <a href="https://calendly.com/YOUR-LINK" target="_blank" rel="noopener noreferrer">Book Call</a>
         `;
-      } else if (score >= 40) {
+      } else if (score >= GOOD_POTENTIAL_THRESHOLD) {
         resultText = `
           <h3>Good potential</h3>
           <p>Start with an AI Audit.</p>
