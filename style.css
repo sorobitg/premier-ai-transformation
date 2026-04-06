@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0b0f14;
+  color: white;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero {
+  background: linear-gradient(135deg, #042F2E, #0F766E);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #111827;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.before-after {
+  margin-top: 40px;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.apply form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.apply input,
+.apply textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #374151;
+  background: #111827;
+  color: white;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.apply textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.apply button {
+  padding: 12px 28px;
+  background: #0F766E;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.apply button:hover {
+  background: #0d9488;
+}
